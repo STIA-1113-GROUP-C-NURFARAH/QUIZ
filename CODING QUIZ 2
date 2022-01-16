@@ -1,0 +1,73 @@
+package quiz;
+import java.util.Scanner;
+public class Quiz2 {
+
+	public static void main(String[] args) {
+		//A company decided to give bonus of 5% to employee if his/her year of service is more than 5 years.  
+		//a.    Ask user for their salary and year of service and print the net bonus amount. 
+		//b.    Take monthly salary from one employee and print the highest and the lowest salary. 
+		//c.    Take input of age of 3 employees and determine oldest and youngest among them. 
+		
+		Scanner quiz = new Scanner (System.in);
+		
+		//Question a
+		System.out.println("Enter your salary: RM " );
+		double salary = quiz.nextDouble();
+		System.out.println("Enter year service: ");
+		int year = quiz.nextInt();
+		
+		double bonus = (0.05*salary);
+		
+		if (year > 5)
+			System.out.println("Net bonus amount: RM " + bonus);
+		
+		//QUetsion b
+		
+		
+		int highest=Integer.MIN_VALUE;
+		int lowest=Integer.MAX_VALUE;
+
+		System.out.println("Enter salary2: RM ");
+		int salary2 = quiz.nextInt();
+
+		if(salary2 > highest){
+		    lowest = highest;
+		    highest = salary2;
+		}
+
+		if (salary2 < lowest){
+		    highest=lowest;
+		    lowest=salary2;
+		}
+
+		System.out.println("Highest salary: RM" + highest);
+		System.out.println("Lowest salary: RM" + lowest);
+		
+	//QUestion c
+		
+		int highest2=Integer.MIN_VALUE;
+		int lowest2=Integer.MAX_VALUE;
+
+		System.out.println("Enter ages:  ");
+		int age = quiz.nextInt();
+
+		if(age > highest){
+		    lowest = highest;
+		    highest = age;
+		}
+
+		if (age < lowest){
+		    highest=lowest;
+		    lowest=salary2;
+		}
+
+		System.out.println("Highest age:" + highest2);
+		System.out.println("Lowest age" + lowest2);
+		
+		
+
+
+		
+	}
+
+}
