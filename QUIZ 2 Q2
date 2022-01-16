@@ -1,0 +1,47 @@
+package quiz;
+import java.util.Scanner;
+public class ArrayInStars {
+
+	public static void main(String[] args) {
+		//Write a program called printArrayInStars which prompts user for the number of items in an array (a non-negative integer), 
+		//and saves it in an int variable called NUM_ITEMS. It then prompts user for the values of all the items (non-negative integers) and 
+		//saves them in an int array called items. The program shall then print the contents of the array in a graphical form,
+		//with the array index and values represented by number of stars. For examples:
+			//Enter the number of items: 5
+			//Enter the value of all items (separated by space): 7 4 3 0 7
+			//0: *******(7)
+			//1: ****(4)
+			//2: ***(3)
+			//3: (0)
+			//4: *******(7)
+		Scanner quiz = new Scanner (System.in);
+		
+		System.out.println("Enter the number of items: ");
+		int NUM_ITEMS = quiz.nextInt();
+		
+		int[] value = {1,2,5,10};
+		        printYourPattern(value);
+		    }
+
+		    public static void printYourPattern(int[] value) {
+		        
+		        for (int i = 0; i < value.length; i++) {
+		            int number = value[i];
+
+		            for (int star = 0; star <= number; star++) {
+		                System.out.print("*");
+
+		            }
+		            System.out.println(" ");
+		            System.out.println();
+		            
+		            for (int star = 0; star <= number; star++) {
+		                System.out.print("*");
+		        }
+		    }
+		
+
+	}
+}
+
+
